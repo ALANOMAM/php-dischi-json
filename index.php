@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
 
+    
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--style-->
+    <link rel="stylesheet" href="style.css">
 
     <!-- vue 3 -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -30,10 +33,12 @@
   </div>
 </nav>
 
-         <ul>
+         <ul class="d-flex">
             <li v-for="disco in listaDischi">
-            <img :src="disco.poster" alt="">
-                {{disco.title}}  
+             <div class="box-width">   
+            <img :src="disco.poster" alt="" class="img-fluid">
+              </div>
+                 
             </li>
          </ul>
 
