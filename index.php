@@ -33,12 +33,18 @@
   </div>
 </nav>
 
-         <ul class="d-flex flex-wrap  schema remove-dots">
+         <ul class="d-flex  flex-wrap  schema remove-dots">
             <li v-for="disco in listaDischi" class="schema one-third-space">
-             <div class="box-width">   
+            <div class="img-&-descriptions d-flex flex-column align-items-center content-gap schema">
+            <div class="box-width">   
             <img :src="disco.poster" alt="" class="img-fluid">
               </div>
-                 
+              <div class="d-flex flex-column align-items-center content-gap">
+                <span>{{disco.title}}</span>
+                <span>{{disco.author}}</span>
+                <span>{{disco.year}}</span>
+              </div>
+             </div>   
             </li>
          </ul>
 

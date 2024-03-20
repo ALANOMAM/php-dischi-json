@@ -1,6 +1,6 @@
 <?php
 
-$dischi = [
+/*$dischi = [
     [
         "title"=> "New Jersey",
         "author"=> "Bon Jovi",
@@ -43,12 +43,18 @@ $dischi = [
         "poster"=> "https://images-na.ssl-images-amazon.com/images/I/81MDAIdh78L._SY355_.jpg",
         "genre"=> "Rock"
     ]
-];
+]; 
 
 
 
 header("Content-Type: application/json");
 
-echo json_encode($dischi);
+echo json_encode($dischi);*/
+
+$dischi = file_get_contents("./dischi.json");
+$disks  = json_decode($dischi);
+header("Content-Type: application/json");
+echo json_encode($disks);
+
 
 ?>
