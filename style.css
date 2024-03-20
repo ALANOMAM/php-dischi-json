@@ -1,7 +1,19 @@
 
 .box-width{
     border: 1px solid red;
-    width:400px;
+    width:100%;
     height: auto;
 }
 
+.schema{
+    border: 1px solid blue;  
+}
+
+.remove-dots{
+    list-style-type: none;
+}
+
+.one-third-space{
+   width: calc(100% / 3);
+   padding: 20px;
+}

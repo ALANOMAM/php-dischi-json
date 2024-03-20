@@ -33,8 +33,8 @@
   </div>
 </nav>
 
-         <ul class="d-flex">
-            <li v-for="disco in listaDischi">
+         <ul class="d-flex flex-wrap  schema remove-dots">
+            <li v-for="disco in listaDischi" class="schema one-third-space">
              <div class="box-width">   
             <img :src="disco.poster" alt="" class="img-fluid">
               </div>
