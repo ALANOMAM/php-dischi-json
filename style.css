@@ -1,8 +1,12 @@
 
 .box-width{
-    border: 1px solid red;
+   /* border: 1px solid red;*/
     width:100%;
     height:auto;
+}
+
+img{
+    width: 100%;
 }
 
 .schema{
@@ -20,4 +24,9 @@
 
 .content-gap{
     gap:20px;
+}
+
+.img-and-descriptions{
+ background-color: rgba(17, 32, 48, 1);
+ padding: 20px;
 }

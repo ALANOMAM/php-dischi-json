@@ -24,20 +24,22 @@
 
     <div id="app">
 
-        <div class="container-fluid">
-
 <!-- As a heading -->
-<nav class="navbar bg-body-tertiary">
+<nav class="navbar bg-body-tertiary p-3">
   <div class="container-fluid">
     <span class="navbar-brand mb-0 h1">Navbar</span>
   </div>
 </nav>
 
-         <ul class="d-flex  flex-wrap  schema remove-dots">
-            <li v-for="disco in listaDischi" class="schema one-third-space">
-            <div class="img-&-descriptions d-flex flex-column align-items-center content-gap schema">
+        <div class="container-fluid">
+
+
+
+         <ul class="d-flex  flex-wrap   remove-dots">
+            <li v-for="disco in listaDischi" class=" one-third-space">
+            <div class="img-and-descriptions d-flex flex-column align-items-center content-gap">
             <div class="box-width">   
-            <img :src="disco.poster" alt="" class="img-fluid">
+            <img :src="disco.poster" alt="" class="">
               </div>
               <div class="d-flex flex-column align-items-center content-gap">
                 <span>{{disco.title}}</span>
