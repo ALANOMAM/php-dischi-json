@@ -1,5 +1,5 @@
 <?php
-
+//METODO 1 PER ACCEDERE AI DATI CHE POI DIVENTARRANNO API (OVVERO TRAMITE UN ARRAY DIRETTAMENTE NEL FILE SERVER.PHP SCRITTO IN PHP)
 /*$dischi = [
     [
         "title"=> "New Jersey",
@@ -45,14 +45,18 @@
     ]
 ]; 
 
-
-
 header("Content-Type: application/json");
 
 echo json_encode($dischi);*/
 
+
+//METODO 2 PER ACCEDERE AI DATI CHE POI DIVENTARRANNO API (OVVERO TRAMITE UN FILE JSON CONVERTITO IN PHP E POI CONVERTITO IN JS)
+
+//la riga sotto prende il file json che passo e lo trasforma in stinga 
 $dischi = file_get_contents("./dischi.json");
+//la riga sotto prende la riga passata sopra(ancora in json) e lo rende leggibile in php
 $disks  = json_decode($dischi);
+
 header("Content-Type: application/json");
 echo json_encode($disks);
 
