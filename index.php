@@ -25,7 +25,10 @@
             <h1>prova</h1>
 
          <ul>
-            <li v-for="disco in listaDischi">{{disco}}</li>
+            <li v-for="disco in listaDischi">
+            <img :src="disco.poster" alt="">
+                {{disco.title}}  
+            </li>
          </ul>
 
 
