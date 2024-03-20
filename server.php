@@ -1,9 +1,12 @@
 <?php
 
-/*$discList = json_encode('dischi.json');*/
+  $you = ["uno","due","tre",
+  ];
+
+
 
 header("Content-Type: application/json");
 
-echo encode('./dischi.json') ;
+echo json_encode($you);
 
 ?>

@@ -4,6 +4,8 @@ createApp({
     data() {
         return {
 
+            listaDischi:[],
+
             /*
             todoList: [],
             newTodoText: '',*/
@@ -26,7 +28,7 @@ createApp({
 
         axios.get('./server.php').then(res => {
             console.log(res.data);
-
+         this.listaDischi = res.data
             
         });
 

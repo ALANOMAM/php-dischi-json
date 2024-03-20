@@ -17,11 +17,20 @@
 </head>
 <body>
 
+    
+
     <div id="app">
 
         <div class="container py-5">
             <h1>prova</h1>
+
+         <ul>
+            <li v-for="disco in listaDischi">{{disco}}</li>
+         </ul>
+
+
         </div>   
+
     
            
     </div>
