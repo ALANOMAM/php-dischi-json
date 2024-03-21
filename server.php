@@ -54,11 +54,19 @@ echo json_encode($dischi);*/
 
 //la riga sotto prende il file json che passo e lo trasforma in stinga 
 $dischi = file_get_contents("./dischi.json");
-//la riga sotto prende la riga passata sopra(ancora in json) e lo rende leggibile in php
+//la riga sotto prende la riga passata sopra(ancora in json) e lo rende un array leggibile in php
+//questa conversione mi serve nel caso io debba applicare modifiche al mio database, tipo filtrare, modificare ecc
 $disks  = json_decode($dischi);
 
-header("Content-Type: application/json");
-echo json_encode($disks);
+/*--------------------------------------------------------------------------------*/
+/* DI SOLITO E IN QUESTO SPAZIO CHE APPLICO LE MODFICHE CHE VOGLIO
+AL MIO DATABASE, TIPO AGGIUNTA ELEMENTI, FILTRARE ELEMENTI CHE VENGONO DAL DATABASE
+ECC */
+/*---------------------------------------------------------------------------------*/
 
+
+header("Content-Type: application/json");
+//la riga sotto prende l'array leggibile in php  lo rende un di nuovo un array json, leggibile dal main.js tramite axios
+echo json_encode($disks);
 
 ?>
